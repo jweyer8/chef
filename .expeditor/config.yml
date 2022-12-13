@@ -16,6 +16,7 @@ rubygems:
   - chef-config
   - chef-bin
   - chef-utils
+  - knife
 
 # At the given time, trigger the following scheduled workloads
 # https://expeditor.chef.io/docs/getting-started/subscriptions/#scheduling-workloads
@@ -23,18 +24,12 @@ schedules:
   - name: nightly_build_main
     description: "Run a nightly build in the Buildkite pipeline"
     cronline: "0 6 * * *"
-  - name: nightly_build_chef_17
-    description: "Run a nightly build in the Buildkite pipeline"
-    cronline: "30 9 * * 2,4"
-  - name: nightly_build_chef_16
-    description: "Run a nightly build in the Buildkite pipeline"
-    cronline: "30 2 * * 2"
 
 pipelines:
   - verify:
       public: true
       env:
-        - IGNORE_ARTIFACTORY_RUBY_PROXY: true # Artifactory is throwing 500's when downloading some gems. 
+        - IGNORE_ARTIFACTORY_RUBY_PROXY: true # Artifactory is throwing 500's when downloading some gems.
   - docker/build:
       definition: .expeditor/docker-build.pipeline.yml
       trigger: default
@@ -281,11 +276,5 @@ subscriptions:
     actions:
       - bash:.expeditor/update_dep.sh
   - workload: schedule_triggered:chef/chef:main:nightly_build_main:*
-    actions:
-      - trigger_pipeline:omnibus/adhoc
-  - workload: schedule_triggered:chef/chef:chef-17:nightly_build_chef_17:*
-    actions:
-      - trigger_pipeline:omnibus/adhoc
-  - workload: schedule_triggered:chef/chef:chef-16:nightly_build_chef_16:*
     actions:
       - trigger_pipeline:omnibus/adhoc

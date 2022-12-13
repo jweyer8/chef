@@ -1,31 +1,57 @@
 <!-- usage documentation: http://expeditor-docs.es.chef.io/configuration/changelog/ -->
 This changelog lists individual merged pull requests to Chef Infra Client and geared towards developers. For a list of significant changes per release see the [Chef Infra Client Release Notes](https://docs.chef.io/release_notes_client/).
 
-<!-- latest_release 18.0.180 -->
-## [v18.0.180](https://github.com/chef/chef/tree/v18.0.180) (2022-11-10)
+<!-- latest_release 18.0.201 -->
+## [v18.0.201](https://github.com/chef/chef/tree/v18.0.201) (2022-12-13)
 
 #### Merged Pull Requests
-- Update GitHub Actions to address deprecated actions in workflows [#13344](https://github.com/chef/chef/pull/13344) ([gene1wood](https://github.com/gene1wood))
+- macos_userdefaults: Use string for property deprecated message [#13350](https://github.com/chef/chef/pull/13350) ([jweyer8](https://github.com/jweyer8))
 <!-- latest_release -->
 
-<!-- release_rollup since=18.0.169 -->
+<!-- release_rollup since=18.0.185 -->
 ### Changes not yet released to stable
 
 #### Merged Pull Requests
-- Update GitHub Actions to address deprecated actions in workflows [#13344](https://github.com/chef/chef/pull/13344) ([gene1wood](https://github.com/gene1wood)) <!-- 18.0.180 -->
-- fix knife train-core dep for latest supporting net-ssh 7.x dep [#13338](https://github.com/chef/chef/pull/13338) ([Stromweld](https://github.com/Stromweld)) <!-- 18.0.179 -->
-- Fix false updates on cron resource when using integers [#13147](https://github.com/chef/chef/pull/13147) ([kimbernator](https://github.com/kimbernator)) <!-- 18.0.178 -->
-- Remove &quot;free&quot; command from buildkite run as it&#39;s not supported [#13315](https://github.com/chef/chef/pull/13315) ([gene1wood](https://github.com/gene1wood)) <!-- 18.0.177 -->
-- adding choco function to test if it exists already [#13330](https://github.com/chef/chef/pull/13330) ([sean-simmons-progress](https://github.com/sean-simmons-progress)) <!-- 18.0.176 -->
-- Fix call to install_snaps which is missing an argument [#13025](https://github.com/chef/chef/pull/13025) ([gene1wood](https://github.com/gene1wood)) <!-- 18.0.175 -->
-- Fix windows habitat git [#13316](https://github.com/chef/chef/pull/13316) ([mwrock](https://github.com/mwrock)) <!-- 18.0.174 -->
-- Bump deps for net-ssh 7.x for RHEL 9 and Ubuntu 22.04 ssh [#13284](https://github.com/chef/chef/pull/13284) ([Stromweld](https://github.com/Stromweld)) <!-- 18.0.173 -->
-- Bugfix: checksum validation [#13210](https://github.com/chef/chef/pull/13210) ([decoyjoe](https://github.com/decoyjoe)) <!-- 18.0.172 -->
-- Docs: Fix windows package docs examples [#13211](https://github.com/chef/chef/pull/13211) ([decoyjoe](https://github.com/decoyjoe)) <!-- 18.0.171 -->
-- Update the badssl cert to fix kitchen tests [#13311](https://github.com/chef/chef/pull/13311) ([PrajaktaPurohit](https://github.com/PrajaktaPurohit)) <!-- 18.0.170 -->
+- macos_userdefaults: Use string for property deprecated message [#13350](https://github.com/chef/chef/pull/13350) ([jweyer8](https://github.com/jweyer8)) <!-- 18.0.201 -->
+- Fix indentation of condition for disabling repos [#13327](https://github.com/chef/chef/pull/13327) ([darnaut](https://github.com/darnaut)) <!-- 18.0.200 -->
+- Updated post Chef-18 to clarify how to release [#13428](https://github.com/chef/chef/pull/13428) ([johnmccrae](https://github.com/johnmccrae)) <!-- 18.0.199 -->
+- Patch for CVE-2022-29181 and CVS-2022-24836 [#13398](https://github.com/chef/chef/pull/13398) ([tpowell-progress](https://github.com/tpowell-progress)) <!-- 18.0.198 -->
+- Jfm/chef18 version bumps [#13421](https://github.com/chef/chef/pull/13421) ([johnmccrae](https://github.com/johnmccrae)) <!-- 18.0.197 -->
+- Bump omnibus-software from `57fbed5` to `a4f5cff` in /omnibus [#13418](https://github.com/chef/chef/pull/13418) ([dependabot[bot]](https://github.com/dependabot[bot])) <!-- 18.0.196 -->
+- Remove redundant code for chef16/17 nightlies from main branch [#13405](https://github.com/chef/chef/pull/13405) ([neha-p6](https://github.com/neha-p6)) <!-- 18.0.195 -->
+- Switch main back to current for kitchen [#13397](https://github.com/chef/chef/pull/13397) ([tpowell-progress](https://github.com/tpowell-progress)) <!-- 18.0.194 -->
+- Updating Gem versions - specifically updating Chef for omnibus [#13391](https://github.com/chef/chef/pull/13391) ([johnmccrae](https://github.com/johnmccrae)) <!-- 18.0.193 -->
+- Chef-16 does not appear to have a &#39;current&#39; channel, falling back to … [#13362](https://github.com/chef/chef/pull/13362) ([johnmccrae](https://github.com/johnmccrae)) <!-- 18.0.192 -->
+- Update deprecated &quot;hab sup status&quot; call (do not merge until hab / test pipeline is green again) [#13314](https://github.com/chef/chef/pull/13314) ([gene1wood](https://github.com/gene1wood)) <!-- 18.0.191 -->
+- New launchd key for associating a bundle identifier with Login Items [#13288](https://github.com/chef/chef/pull/13288) ([chilcote](https://github.com/chilcote)) <!-- 18.0.190 -->
+- Lock ruby to 3.1.2 for GitHub Actions unit specs [#13393](https://github.com/chef/chef/pull/13393) ([tpowell-progress](https://github.com/tpowell-progress)) <!-- 18.0.189 -->
+- Added option to set release version when using activation keys [#13352](https://github.com/chef/chef/pull/13352) ([ianl678](https://github.com/ianl678)) <!-- 18.0.188 -->
+- Update omnibus-software for FIPS issues [#13375](https://github.com/chef/chef/pull/13375) ([tpowell-progress](https://github.com/tpowell-progress)) <!-- 18.0.187 -->
+-     Res validation should be aware of action prop reqs. [#13069](https://github.com/chef/chef/pull/13069) ([sabat](https://github.com/sabat)) <!-- 18.0.186 -->
 <!-- release_rollup -->
 
 <!-- latest_stable_release -->
+## [v18.0.185](https://github.com/chef/chef/tree/v18.0.185) (2022-11-17)
+
+#### Merged Pull Requests
+- Update the badssl cert to fix kitchen tests [#13311](https://github.com/chef/chef/pull/13311) ([PrajaktaPurohit](https://github.com/PrajaktaPurohit))
+- Docs: Fix windows package docs examples [#13211](https://github.com/chef/chef/pull/13211) ([decoyjoe](https://github.com/decoyjoe))
+- Bugfix: checksum validation [#13210](https://github.com/chef/chef/pull/13210) ([decoyjoe](https://github.com/decoyjoe))
+- Bump deps for net-ssh 7.x for RHEL 9 and Ubuntu 22.04 ssh [#13284](https://github.com/chef/chef/pull/13284) ([Stromweld](https://github.com/Stromweld))
+- Fix windows habitat git [#13316](https://github.com/chef/chef/pull/13316) ([mwrock](https://github.com/mwrock))
+- Fix call to install_snaps which is missing an argument [#13025](https://github.com/chef/chef/pull/13025) ([gene1wood](https://github.com/gene1wood))
+- adding choco function to test if it exists already [#13330](https://github.com/chef/chef/pull/13330) ([sean-simmons-progress](https://github.com/sean-simmons-progress))
+- Remove &quot;free&quot; command from buildkite run as it&#39;s not supported [#13315](https://github.com/chef/chef/pull/13315) ([gene1wood](https://github.com/gene1wood))
+- Fix false updates on cron resource when using integers [#13147](https://github.com/chef/chef/pull/13147) ([kimbernator](https://github.com/kimbernator))
+- fix knife train-core dep for latest supporting net-ssh 7.x dep [#13338](https://github.com/chef/chef/pull/13338) ([Stromweld](https://github.com/Stromweld))
+- Update GitHub Actions to address deprecated actions in workflows [#13344](https://github.com/chef/chef/pull/13344) ([gene1wood](https://github.com/gene1wood))
+- Updating the Hab installer and gems [#13340](https://github.com/chef/chef/pull/13340) ([johnmccrae](https://github.com/johnmccrae))
+- fix bug in chef_client_config resource [#13349](https://github.com/chef/chef/pull/13349) ([Stromweld](https://github.com/Stromweld))
+- Adding TLS for Habitat-test.ps1 under Windows PowerShell [#13361](https://github.com/chef/chef/pull/13361) ([johnmccrae](https://github.com/johnmccrae))
+- Add allowed_actions for each package type [#13166](https://github.com/chef/chef/pull/13166) ([gene1wood](https://github.com/gene1wood))
+- Add recipients of Awesome Chef Awards 2021/2022 [#13285](https://github.com/chef/chef/pull/13285) ([tnir](https://github.com/tnir))
+<!-- latest_stable_release -->
+
 ## [v18.0.169](https://github.com/chef/chef/tree/v18.0.169) (2022-10-27)
 
 #### Merged Pull Requests
@@ -200,7 +226,6 @@ This changelog lists individual merged pull requests to Chef Infra Client and ge
 - INFC-321 Uncomment &quot;Upgrade Chef/Ohai Appbundler&quot; build stage in kitchen tests [#13286](https://github.com/chef/chef/pull/13286) ([tpowell-progress](https://github.com/tpowell-progress))
 - Fix missing require and small error in REST implementation [#13066](https://github.com/chef/chef/pull/13066) ([tecracer-theinen](https://github.com/tecracer-theinen))
 - Point berkshelf spec at chef/berkshelf [#13295](https://github.com/chef/chef/pull/13295) ([tpowell-progress](https://github.com/tpowell-progress))
-<!-- latest_stable_release -->
 
 ## [v17.9.26](https://github.com/chef/chef/tree/v17.9.26) (2022-01-05)
 
