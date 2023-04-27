@@ -266,7 +266,7 @@ subscriptions:
   - workload: ruby_gem_published:addressable-*
     actions:
       - bash:.expeditor/update_dep.sh
-  - workload: ruby_gem_published:proxifier-*
+  - workload: ruby_gem_published:proxifier2-*
     actions:
       - bash:.expeditor/update_dep.sh
   - workload: ruby_gem_published:syslog-logger-*
@@ -300,4 +300,4 @@ subscriptions:
       - bash:.expeditor/update_dep.sh
   - workload: schedule_triggered:chef/chef:main:nightly_build_main:*
     actions:
-      - trigger_pipeline:omnibus/adhoc
+      - trigger_pipeline:validate/adhoc
